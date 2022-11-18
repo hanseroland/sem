@@ -68,11 +68,13 @@ const MenuOption = styledMui(Link)(({ theme }) => ({
     position: "relative",
     textAlign:"center",
     transition: "0.3s",
+    width:100,
+    zIndex:1,
     [theme.breakpoints.up('md')]: {
       paddingLeft:theme.spacing(3),
     },
    '&:hover' : {
-        borderBottom: '4px solid  #006431',
+        borderBottom: '4px solid  #fff',
         transform:'all 0.2s ease-out'
       },
       '&:active' :{
@@ -207,7 +209,7 @@ function Navbar() {
     {
        _id:1, 
       title: 'Projet MIAMEZ',
-      path: '/nos-activites/projet-miamizez"', 
+      path: '/nos-activites/projet-miamizez', 
    },
   {
     _id:2,
@@ -242,7 +244,7 @@ function Navbar() {
 
     return(
         <ToolBar
-         
+       
         >
                 <IconButton
                     {...{
@@ -263,8 +265,9 @@ function Navbar() {
                         open:toggleMenuOpen,
                         onClose:handleToggleMenuClose
                     }}
+                   
                 >
-                    <div>
+                    <div  >
                    
                          <Box>
                             <MenuItem
@@ -284,6 +287,7 @@ function Navbar() {
                             >
                                <MenuOptionToggle to="/a-propos" onClick={handleClick}>
                                    À propos
+                                   {dropdown && <Submenu items={apropos} />}
                               </MenuOptionToggle>
                                
                             </MenuItem>
@@ -353,29 +357,34 @@ function Navbar() {
               <LogoImg  src={Logo} />
             </LogoLink>
         </ContainerLogo>
-        <MenuBox>
+        <MenuBox  >
             
-            <MenuOption
-               component="button"
-               variant="body1"
-                to='/'
-              className={navbar ? clsx(classes.menuOption,classes.menuOptionActive) : classes.menuOption }
-            >
-                Accueil
-            </MenuOption>
-         
-            <MenuOption
+            <MenuItem>
+              <MenuOption
                 component="button"
                 variant="body1"
-                to="a-propos"
+                  to='/'
                 className={navbar ? clsx(classes.menuOption,classes.menuOptionActive) : classes.menuOption }
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-               À propos
+              >
+                  Accueil
+              </MenuOption>
+            </MenuItem>
+            
+            
+                <MenuOption
+                    component="button"
+                    variant="body1"
+                    to="#"
+                    className={navbar ? clsx(classes.menuOption,classes.menuOptionActive) : classes.menuOption }
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                >
+                  À propos
+                  {dropdown && <Submenu items={apropos} />}
+                </MenuOption>
                
-            </MenuOption>
-            {dropdown && <Submenu items={apropos} />}
+           
+           
              
             <MenuOption
               component="button"
