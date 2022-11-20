@@ -11,6 +11,8 @@ import Circle from '../../components/cards/Circle';
 import * as RiIcon from 'react-icons/ri';
 import * as GiIcon from 'react-icons/gi';
 import { Container } from '@mui/system'
+import { useEffect } from 'react'
+import ValueCard from '../../components/cards/ValueCard'
 
 const Message = [
     {
@@ -133,6 +135,10 @@ const NosValeur = [
     }
 ]
 function Messages_leaders() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+      }, []);
+    
   return (
     <>
      <BannerBread title="Message De Nos Leaders" />
@@ -227,14 +233,14 @@ function Messages_leaders() {
 
                 {
                     NosValeur.map((item,index)=>(
-                        <Grid key={item._id} item lg={6} md={6} sm={6} xs={12} sx={{display:'flex',justifyContent:"center"}} >
+                        <Grid key={item._id} item lg={3} md={3} sm={6} xs={6}  sx={{display:'flex',justifyContent:"center"}} >
                             <motion.div
                               viewport={{once:false}}
                               initial={{opacity:0,y:-100}}
                               whileInView={{opacity:1,y:0}}
                               transition={{type:"easeIn", duration: 1 }}
                             >
-                                <Circle
+                                <ValueCard
                                 icon={item.icon}
                                 title={item.title}
                                 content={item.content}

@@ -11,6 +11,8 @@ import styled  from 'styled-components';
 import Submenu from './Submenu';
 import { MenuItems } from './MenuItems';
 import { Facebook, LinkedIn } from '@mui/icons-material';
+import {BrowserRouter as Router,Route,Routes, useLocation} from 'react-router-dom'
+
 
 const MenuBox = styledMui(Box)(({ theme }) => ({
    display:'flex',
@@ -66,7 +68,7 @@ const MenuOption = styledMui(Link)(({ theme }) => ({
     padding:theme.spacing(2),
     textDecoration:'none',
     position: "relative",
-    textAlign:"center",
+    textAlign:"left",
     transition: "0.3s",
     width:100,
     zIndex:1,
@@ -102,7 +104,7 @@ const MenuOption = styledMui(Link)(({ theme }) => ({
 
 const useStyles = makeStyles({
     menuOption:{
-        padding:10
+        padding:5
     },
     menuBox:{
         display:'flex',
@@ -283,9 +285,9 @@ function Navbar() {
                             <MenuItem
                                 component="button"
                                 variant="body1"
-                                to='a-propos'
+                                to='#'
                             >
-                               <MenuOptionToggle to="/a-propos" onClick={handleClick}>
+                               <MenuOptionToggle to="#" onClick={handleClick}>
                                    À propos
                                    {dropdown && <Submenu items={apropos} />}
                               </MenuOptionToggle>
@@ -359,7 +361,7 @@ function Navbar() {
         </ContainerLogo>
         <MenuBox  >
             
-            <MenuItem>
+           
               <MenuOption
                 component="button"
                 variant="body1"
@@ -368,9 +370,7 @@ function Navbar() {
               >
                   Accueil
               </MenuOption>
-            </MenuItem>
-            
-            
+          
                 <MenuOption
                     component="button"
                     variant="body1"
@@ -471,7 +471,10 @@ function Navbar() {
   return (
     <div  className={navbar ? clsx(classes.navbar,classes.active) : classes.navbar } >
       <Container>
-        {toggleMenu ? displayToggleMenu() : displayLargeMenu()} 
+       
+            {toggleMenu ? displayToggleMenu() : displayLargeMenu()} 
+      
+       
       </Container>
     </div>
   )

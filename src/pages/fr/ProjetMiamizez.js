@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BannerBread from '../../components/banner/BannerBread'
 import Section from '../../components/sections/Section'
 import styled from 'styled-components';
@@ -128,6 +128,11 @@ export const ColumnRight = styled(Grid)`
 `;
 
 function ProjetMiamizez() {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+      }, []);
+    
   return (
     <>
     <BannerBread title="Nos Projets Majeurs"/>

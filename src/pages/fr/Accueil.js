@@ -25,65 +25,27 @@ import Image8 from '../../images/unnamed_6.png'
 import Image9 from '../../images/unnamed.png'
 import Image10 from '../../images/image_3.png'
 import CardImage from '../../components/cards/CardImage';
-import PartnerCard from '../../components/cards/PartnerCard';
 import HeroSection from '../../components/banner/Herosection';
 import { useInView } from "react-intersection-observer";
 import Circle from '../../components/cards/Circle';
 import * as GiIcon from 'react-icons/gi'   
 import Slide from '../../components/banner/Slide';
 import Partners from '../../components/slick/Partners';
-
+import Homeslide from '../../components/slick/Homeslide';
+import Slide1 from '../../images/slide-1.jpg' 
+import Slide2 from '../../images/slide-2.jpg'
+import Slide3 from '../../images/slide-3.jpg'
+import back from '../../images/V79A6136.jpg'
 
 
 
 const Title3 = styled(motion.h3)`
-   color:#FFF ;
+   color:#FFF;
    font-size: 2rem;
-   text-align:center ;
-  
+   text-align:center;
 `;
 
-export const data = [
-  {
-    _id:1,
-    icon:<TrendingUpIcon sx={{
-      width:50,
-      height:50,
-      
-    }} />,
-    title:"Optimiser",
-    image:Img4,
-    details:"Optimiser les revenus miniers",
-    position:false
 
-  },
-  {
-    _id:2,
-    icon:<HandshakeIcon  sx={{
-      width:50,
-      height:50,
-      
-    }}/>,
-    title:"Promouvoir",
-    image:Img,
-    details:"Promouvoir un tissu industriel national dans les secteurs minier.",
-    position:true
-
-  },
-  {
-    _id:3,
-    icon:<BuildIcon sx={{
-      width:50,
-      height:50,
-      
-    }}/>,
-    title:"Renforcer",
-    image:Img2,
-    details:"Renforcer les capacités nationales dans les secteurs minier.",
-    position:false
-
-  }
-];
 
 export const images = [
   {
@@ -145,6 +107,47 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0 }
 };
 
+export const data = [
+  {
+    _id:1,
+    icon:<TrendingUpIcon sx={{
+      width:50,
+      height:50,
+      
+    }} />,
+    title:"Optimiser",
+    image:Img4,
+    details:"Optimiser les revenus miniers",
+    position:false
+
+  },
+  {
+    _id:2,
+    icon:<HandshakeIcon  sx={{
+      width:50,
+      height:50,
+      
+    }}/>,
+    title:"Promouvoir",
+    image:Img,
+    details:"Promouvoir un tissu industriel national dans les secteurs minier.",
+    position:true
+
+  },
+  {
+    _id:3,
+    icon:<BuildIcon sx={{
+      width:50,
+      height:50,
+      
+    }}/>,
+    title:"Renforcer",
+    image:Img2,
+    details:"Renforcer les capacités nationales dans les secteurs minier.",
+    position:false
+
+  }
+];
 function Accueil() {
 
   const control = useAnimation();
@@ -157,6 +160,12 @@ function Accueil() {
     exit:{opacity:0,x:0,transition:{duration:2}}
   }
 
+  const slides = [
+    {url:Slide1,title:"Votre partenaire minier"},
+    {url:Slide2,title:"Votre partenaire minier"},
+    {url:Slide3,title:"Votre partenaire minier"}
+ ];
+
 
   useEffect(() => {
     if (inView) {
@@ -167,13 +176,18 @@ function Accueil() {
 
   }, [control, inView]);
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
 
   return (
     <div
      
      >
-       <Slide/>
+       {/*<Slide/>*/}
       {/*<Banner/>*/}
+      <Homeslide  items={slides}/>
       <motion.div
         ref={ref}
         variants={boxVariant}
@@ -284,13 +298,13 @@ function Accueil() {
       />
      <div>
       <Parallax
-                bgImage={Img3}
+                bgImage={back}
                 renderLayer={percentage => (
                     <div
                         style={{
                             position: 'absolute',
                             //background: `rgba(255, 255, 0, ${percentage * 1})`,
-                            background:"#0064308e",
+                            background:"#0064304e",
                             width: '100%',
                             height: "100%",
                             //left: '25%',
@@ -328,7 +342,7 @@ function Accueil() {
                               title={item.title}
                               details={item.details}
                               icon={item.icon}
-                            />
+                            /> 
                           </motion.div>
                          
                        </Grid>

@@ -49,7 +49,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 1 }}>
+        <Box  sx={{ p: 1 }}>
            <Grid container>
                 {children}
            </Grid>
@@ -104,11 +104,11 @@ export default function VerticalTabs({data}) {
       {
             data.map((item,index)=>(
             <TabPanel key={item._id} value={value} index={index}>
-                <Grid item xs={12}> <h4>{item.title} </h4> </Grid>
+                <Grid  ml={2} item xs={12}> <h4>{item.title} </h4> </Grid>
 
                
                     {item.image ?
-                      <Grid item lg={6} xs={12}> 
+                      <Grid ml={2} item lg={6} xs={12}> 
                             <Image src={item.image} alt={item.alt} />
                       </Grid>
                       :

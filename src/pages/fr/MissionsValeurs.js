@@ -5,9 +5,10 @@ import BannerBread from '../../components/banner/BannerBread';
 import Mng from '../../images/V79A6136.jpg'
 import InfoSection from '../../components/sections/InfoSection';
 import Section from '../../components/sections/Section';
-import Circle from '../../components/cards/Circle';
 import * as RiIcon from 'react-icons/ri';
 import * as GiIcon from 'react-icons/gi';
+import ValueCard from '../../components/cards/ValueCard';
+import { useEffect } from 'react';
 
 
 
@@ -28,19 +29,19 @@ const Text = "L'objectif de SEM est de participer activement au développement d
 const NosValeur = [
     {
         _id:1,
-        icon:<GiIcon.GiTeacher color="#006431" size={70} />,
+        icon:<GiIcon.GiTeacher color="#fff" size={70} />,
         title:"Travail",
         content:"Nous faisons ce qui est juste et nous honorons nos engagements.",
-        color:"#707173",
-        bgcolor:"#fff",
+        color:"#fff",
+        bgcolor:"#006431",
     },
     {
         _id:2,
-        icon:<GiIcon.GiDiploma color="#fff" size={70} />,
+        icon:<GiIcon.GiDiploma color="#006431" size={70} />,
         title:"Excellence",
         content:"Nous fixons des standards élevées et nous nous mettons au défi de fournir des performances supérieures.",
-        color:"#fff",
-        bgcolor:"#006431",
+        color:"#006431",
+        bgcolor:"fff",
     },
     {
         _id:3,
@@ -61,6 +62,9 @@ const NosValeur = [
 ]
 
 function Missions_valeurs() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+      }, []);
     
   return (
     <>
@@ -96,18 +100,18 @@ function Missions_valeurs() {
             whileInView={{opacity:1,x:0}}
             transition={{type:"easeIn", duration: 1 }}
        >
-            <Grid container spacing={2} >
+            <Grid container spacing={2} mb={5} >
 
                 {
                     NosValeur.map((item,index)=>(
-                        <Grid key={item._id} item lg={6} md={6} sm={6} xs={12} sx={{display:'flex',justifyContent:"center"}} >
+                        <Grid key={item._id} item lg={3} md={3} sm={6} xs={6} sx={{display:'flex',justifyContent:"center"}} >
                             <motion.div
                               viewport={{once:false}}
                               initial={{opacity:0,y:-100}}
                               whileInView={{opacity:1,y:0}}
                               transition={{type:"easeIn", duration: 1 }}
                             >
-                                <Circle
+                                <ValueCard 
                                 icon={item.icon}
                                 title={item.title}
                                 content={item.content}

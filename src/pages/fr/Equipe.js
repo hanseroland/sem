@@ -14,6 +14,7 @@ import styled from 'styled-components';
 import {motion } from 'framer-motion';
 import MDEditor from '@uiw/react-md-editor';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import { useEffect } from 'react';
 
 export const Image = styled.img`
   position: relative;
@@ -126,6 +127,11 @@ const Team = [
 ]
 
 function Equipe() {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   return (
     <>
      <BannerBread title="Équipe dirigeante"/>

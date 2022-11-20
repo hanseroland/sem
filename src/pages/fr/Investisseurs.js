@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BannerBread from '../../components/banner/BannerBread';
 import Section from '../../components/sections/Section';
 import { Grid, Typography } from '@mui/material';
@@ -57,6 +57,10 @@ function Investisseurs() {
     animate:{opacity:1,x:100,transition:{duration:2}},
     exit:{opacity:0,x:0,transition:{duration:2}}
   }
+  
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
 
   return (
     <div >
@@ -79,9 +83,9 @@ function Investisseurs() {
                   étrangers et locaux.
                   </Typography>
               </Box>
-              <Grid display="flex" justifyContent="center" marginBottom={1} lg={4} xs={12}>
+              <Grid display="flex" mt={5} justifyContent="center" marginBottom={1} lg={4} xs={12}>
                   <CardIcon
-                   icon={<HiIcon.HiAdjustments color="#000" size={60} />}
+                   icon={<HiIcon.HiAdjustments color=" #006431" size={60} />}
                    title="Le Gabon a adopté le PSGE"
                    content="À la suite de la crise économique mondiale de 2008, 
                    le Gabon a décidé de modifier sa stratégie de développement. 
@@ -93,11 +97,12 @@ function Investisseurs() {
                    du Sud et l'Afrique du Sud. le développement de trois piliers : 
                    le Gabon industriel, le Gabon vert, le Gabon des services essentiellement 
                    pour créer de la richesse et de la croissance."
-                   color="#000"
+                   titleColor="#006431"
+                   contentColor="#000"
                    bgcolor="#fff"
                   />
               </Grid>
-              <Grid display="flex" justifyContent="center"  marginBottom={1} lg={4} xs={12} >
+              <Grid display="flex" mt={5} justifyContent="center"  marginBottom={1} lg={4} xs={12} >
               <CardIcon
                    icon={<FaIcon.FaChartLine color="#fff" size={60} />}
                    title="Un environnement commercial favorable"
@@ -111,13 +116,14 @@ function Investisseurs() {
 
                    Création du Haut Conseil pour l'Investissement afin de renforcer les relations 
                    entre les secteurs public et privé ; un des PIB par habitant les plus élevés d'Afrique."
-                   color="#fff"
+                   titleColor="#fff"
+                   contentColor="#fff"
                    bgcolor="#006431"
                   />
               </Grid>
-              <Grid display="flex" justifyContent="center"  marginBottom={1} lg={4} xs={12} >
+              <Grid display="flex" mt={5} justifyContent="center"  marginBottom={1} lg={4} xs={12} >
               <CardIcon
-                   icon={<FaIcon.FaRegHandshake color="#000" size={60} />}
+                   icon={<FaIcon.FaRegHandshake color=" #006431" size={60} />}
                    title="Stabilité politique et sociale"
                    content="Depuis son indépendance, le Gabon jouit d'une stabilité politique 
                    et sociale grâce à un pacte social fondé sur la solidarité, le dialogue et
@@ -126,7 +132,8 @@ function Investisseurs() {
                    centrale selon l'indice Mo Ibrahim de 2015. 
                    Le Gabon n'a jamais connu de conflit armé et constitue un modèle de
                    paix en Afrique et ailleurs dans le monde."
-                   color="#000"
+                   titleColor="#006431"
+                   contentColor="#000"
                    bgcolor="#fff"
                   />
               </Grid>

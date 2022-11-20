@@ -41,7 +41,10 @@ export default function PartnerCard({src,alt}) {
          justifyContent:'center',
          backgroundColor:"transparent",
          margin:5,
-         
+         border:"1px solid #006431",
+         ":hover":{
+          boxShadow:" 0px 20px 30px -5px rgba(0, 0, 0, 0.3)"
+         } 
         
         }}>
       <CardMedia

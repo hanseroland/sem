@@ -157,8 +157,12 @@ function Activites() {
   }
 
 
+
   const [value, setValue] = useState(Intro);
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
 
 
   return (

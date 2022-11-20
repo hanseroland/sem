@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {motion } from 'framer-motion';
 import BannerBread from '../../components/banner/BannerBread';
 
@@ -10,7 +10,12 @@ function Aprops() {
     exit:{opacity:0,x:0,transition:{duration:2}}
   }
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   return (
+    
     <>
       <BannerBread title="À propos" />
       <h1>Apropos</h1>

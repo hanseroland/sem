@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BannerBread from '../../components/banner/BannerBread'
 import Img5 from '../../images/Marbre_1.jpg'
 import Img6 from '../../images/Marbre_2.jpg'
@@ -94,6 +94,11 @@ const Mabre = [
 
 
 function MabreDisseoussou() {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   return (
     <>
        <BannerBread title="Projet MARBRE DOUSEOUSSOU"/>

@@ -12,7 +12,7 @@ import {motion } from 'framer-motion';
 const H3 = styled.h3`
   font-size:1.5em;
   line-height:1em;
-  color: #000;
+  color: #006431;
   text-transform:capitalize ;
 
   @media screen and (max-width: 920px){

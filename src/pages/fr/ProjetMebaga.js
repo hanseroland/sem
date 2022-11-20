@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BannerBread from '../../components/banner/BannerBread'
 import Img1 from '../../images/carte_Mebaga_S2.jpg'
 import Img3 from '../../images/LOCALISATION_MEBAGA_A2.jpg' 
@@ -66,6 +66,10 @@ const Mebaga = [
 
 
 function ProjetMebaga() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   return (
     <>
      <BannerBread title="Projet MEBAGA"/>

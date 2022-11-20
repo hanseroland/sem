@@ -10,6 +10,11 @@ const CircleContainer = styled.div`
    background-color: ${props => props.bgcolor};
    border-radius:10px;
    padding:5px;
+   transition:transform ease 500ms ;
+
+    &:hover{
+    transform: translate(0,-10px);
+    }
 
    @media screen and (max-width: 375px){
        width:100%;
@@ -37,7 +42,7 @@ const CircleContent = styled.div`
 `;
 
 const Title = styled.h1`
-    color:${props => props.color};
+    color:${props => props.titleColor};
     font-size: 1.1rem;
     text-align: center;
 
@@ -50,7 +55,7 @@ const Title = styled.h1`
 const Subtitle = styled.p`
     text-align: justify;
     font-size:14px;
-    color:${props => props.color};
+    color:${props => props.contentColor};
    // color:#000;
 
 
@@ -61,7 +66,7 @@ const Subtitle = styled.p`
     
 `;
 
-export default function CardIcon({icon,title,content,bgcolor,color}) {
+export default function CardIcon({icon,title,content,bgcolor,titleColor,contentColor}) {
 
 
   return (
@@ -71,10 +76,10 @@ export default function CardIcon({icon,title,content,bgcolor,color}) {
             {icon}
         </CircleIcon>
         <CircleContent>
-          <Title color={color}>
+          <Title titleColor={titleColor}>
               {title}
           </Title>
-          <Subtitle  color={color}>
+          <Subtitle  contentColor={contentColor}>
               {content}
           </Subtitle>
         </CircleContent>

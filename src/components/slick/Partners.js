@@ -34,8 +34,8 @@ function Partners({items}) {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -68,7 +68,7 @@ function Partners({items}) {
   };
 
   return (
-    <div style={{padding:20}}>
+    <div style={{padding:10}}   >
       
       <Slider {...settings}>
           {

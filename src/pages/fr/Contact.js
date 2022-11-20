@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import {motion } from 'framer-motion';
 import BannerBread from '../../components/banner/BannerBread';
 import Section from '../../components/sections/Section';
@@ -36,6 +36,9 @@ export const Image = styled(motion.img)`
 
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
 
 
   const pageMotion = {

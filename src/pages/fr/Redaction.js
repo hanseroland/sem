@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {motion } from 'framer-motion';
 import BannerBread from '../../components/banner/BannerBread';
 import Section from '../../components/sections/Section';
@@ -51,6 +51,10 @@ function Redaction() {
     animate:{opacity:1,x:100,transition:{duration:2}},
     exit:{opacity:0,x:0,transition:{duration:2}}
   }
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
 
   const articles = [
     {
