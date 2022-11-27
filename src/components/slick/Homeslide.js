@@ -40,6 +40,7 @@ const Slide = styled.div`
     justify-content:center;
     //box-shadow:0 6px 20px #327b5975;
     overflow:hidden;
+    
 
 
  @media screen and (max-width: 920px){
@@ -75,7 +76,7 @@ const P = styled.p`
   font-size:1.1em;
   color:#fff;
 `;
-
+ 
 const Content = styled.div`
   position:absolute;
   text-align:center;
@@ -98,10 +99,11 @@ function Homeslide({items}) {
     
     
          <Slider {...settings}>
+          
              {
                 items.map((item)=>(
-                <Slide>
-                    <ImgBox>
+                  <Slide>
+                  <ImgBox>
                      <Image
                         key={item._id}
                         src={item.url}
@@ -111,12 +113,12 @@ function Homeslide({items}) {
                           <H2>Slide One</H2>
                           <P>Lorem ipsum</P>
                       </Content>
-                </ImgBox>
-                </Slide>
-             
-                     
+                  </ImgBox>   
+                  </Slide>
+                      
                 ))
               }
+            
         </Slider>
      
   );

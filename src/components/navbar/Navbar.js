@@ -14,6 +14,46 @@ import { Facebook, LinkedIn } from '@mui/icons-material';
 import {BrowserRouter as Router,Route,Routes, useLocation} from 'react-router-dom'
 
 
+const SidebarLink = styled(Link)`
+  display: flex;
+  color: #006431; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  height:30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:hover {
+    background: #006431;
+    cursor: pointer;
+    color: #fff;
+  }
+`;
+
+const SidebarLabel = styled.span`
+  margin-left: 16px;
+`;
+
+const DropdownLink = styled(Link)`
+  background: #707173; 
+  height: 50px;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:  #fff;
+  font-size: 12px;
+  &:hover {
+    background:#006431;
+    cursor: pointer;
+    color: #fff;
+  }
+`;
+
+
 const MenuBox = styledMui(Box)(({ theme }) => ({
    display:'flex',
    flexDirection:'column',
@@ -102,6 +142,9 @@ const MenuOption = styledMui(Link)(({ theme }) => ({
   }
 ));
 
+
+
+
 const useStyles = makeStyles({
     menuOption:{
         padding:5
@@ -129,9 +172,47 @@ const useStyles = makeStyles({
    menuOptionActive:{
     color:'#fff'
    },
+   sidebarLink:{
+    display:"flex",
+    justifyContent:"space-between",
+    alignItems:"center",
+   }
 
 })
 
+const MenuSub = ({item,handleClick}) => {
+
+  const [subnav, setSubnav] = useState(false);
+
+  const showSubnav = () => setSubnav(!subnav);
+
+  return (
+    <>
+      <SidebarLink to={item.path} onClick={item.subNav && showSubnav && handleClick}>
+        <div>
+          {item.icon}
+          <SidebarLabel>{item.title}</SidebarLabel>
+        </div>
+        <div>
+          {item.subNav && subnav
+            ? item.iconOpened
+            : item.subNav
+            ? item.iconClosed
+            : null}
+        </div>
+      </SidebarLink>
+      {subnav &&
+        item.subNav.map((item, index) => {
+          return (
+            <DropdownLink to={item.path} key={index}>
+              {item.icon}
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </DropdownLink>
+          );
+        })}
+    </>
+  )
+}
 
 
 function Navbar() {
@@ -246,7 +327,6 @@ function Navbar() {
 
     return(
         <ToolBar
-       
         >
                 <IconButton
                     {...{
@@ -269,13 +349,18 @@ function Navbar() {
                     }}
                    
                 >
-                    <div  >
+                   
                    
                          <Box>
-                            <MenuItem
-                            component="button"
-                            variant="body1"
-                            to='/'
+                         {MenuItems.map((item, index) => {
+                          return <MenuSub handleClick={handleClick} item={item} key={index} />;
+                          })
+                        }
+
+                            {/*<MenuItem
+                              component="button"
+                              variant="body1"
+                              to='/'
                             >
                               <MenuOptionToggle to="/" >
                                   Accueil
@@ -285,9 +370,9 @@ function Navbar() {
                             <MenuItem
                                 component="button"
                                 variant="body1"
-                                to='#'
+                                to='/a-propos'
                             >
-                               <MenuOptionToggle to="#" onClick={handleClick}>
+                               <MenuOptionToggle to="/a-propos" onClick={handleClick}>
                                    À propos
                                    {dropdown && <Submenu items={apropos} />}
                               </MenuOptionToggle>
@@ -332,14 +417,15 @@ function Navbar() {
                             
                             >
                               <MenuOptionToggle to="/contact" onClick={handleClick}>
-                              Contact
+                                   Contact
                               </MenuOptionToggle> 
                                
-                            </MenuItem>
+                            </MenuItem>*/}
+                       
+                       
                         </Box>
                             
-                        
-                    </div>
+                 
                 </Drawer>
                
             </ToolBar>
@@ -374,7 +460,7 @@ function Navbar() {
                 <MenuOption
                     component="button"
                     variant="body1"
-                    to="#"
+                    to="/a-propos"
                     className={navbar ? clsx(classes.menuOption,classes.menuOptionActive) : classes.menuOption }
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
