@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/sem/static/css/main.bb2108ef.css",
-    "main.js": "/sem/static/js/main.c9a0489a.js",
+    "main.js": "/sem/static/js/main.72ed068f.js",
+    "static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.jpg": "/sem/static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.fb0aca31fc2e892731bf.jpg",
     "static/media/pexels-aleksandar-pasaric-1238864.jpg": "/sem/static/media/pexels-aleksandar-pasaric-1238864.5577604b0029b9a66c13.jpg",
     "static/media/carte_potentiel_Gabon1.jpg": "/sem/static/media/carte_potentiel_Gabon1.e28ff15c836482e5c42e.jpg",
     "static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.jpg": "/sem/static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.0bbc86be8159b77a2c35.jpg",
@@ -58,10 +59,10 @@
     "static/media/slick.woff": "/sem/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/sem/index.html",
     "main.bb2108ef.css.map": "/sem/static/css/main.bb2108ef.css.map",
-    "main.c9a0489a.js.map": "/sem/static/js/main.c9a0489a.js.map"
+    "main.72ed068f.js.map": "/sem/static/js/main.72ed068f.js.map"
   },
   "entrypoints": [
     "static/css/main.bb2108ef.css",
-    "static/js/main.c9a0489a.js"
+    "static/js/main.72ed068f.js"
   ]
 }
