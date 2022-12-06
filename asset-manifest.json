@@ -1,12 +1,10 @@
 {
   "files": {
     "main.css": "/sem/static/css/main.bb2108ef.css",
-    "main.js": "/sem/static/js/main.72ed068f.js",
+    "main.js": "/sem/static/js/main.892cc35a.js",
     "static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.jpg": "/sem/static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.fb0aca31fc2e892731bf.jpg",
-    "static/media/pexels-aleksandar-pasaric-1238864.jpg": "/sem/static/media/pexels-aleksandar-pasaric-1238864.5577604b0029b9a66c13.jpg",
     "static/media/carte_potentiel_Gabon1.jpg": "/sem/static/media/carte_potentiel_Gabon1.e28ff15c836482e5c42e.jpg",
     "static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.jpg": "/sem/static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.0bbc86be8159b77a2c35.jpg",
-    "static/media/slide-5.jpg": "/sem/static/media/slide-5.a554b5b5b7c56b2d27ae.jpg",
     "static/media/carte_Mebaga_S2.jpg": "/sem/static/media/carte_Mebaga_S2.814f4234a2e846e93169.jpg",
     "static/media/minkie01.jpg": "/sem/static/media/minkie01.f7bb8fbbbefb21abdad2.jpg",
     "static/media/slide-1.jpg": "/sem/static/media/slide-1.0ed0bbe085ca92b9d3cf.jpg",
@@ -45,7 +43,6 @@
     "static/media/main-2.png": "/sem/static/media/main-2.35e25bc9490457c94d11.png",
     "static/media/main-3.png": "/sem/static/media/main-3.edf45ee8def67aee3a25.png",
     "static/media/image.png": "/sem/static/media/image.5873265396b7ba0e4339.png",
-    "static/media/slide-4.jpg": "/sem/static/media/slide-4.6a6f4739817c538aae72.jpg",
     "static/media/image_1.png": "/sem/static/media/image_1.c68af805398f5a0ab8e8.png",
     "static/media/Logo_SEM-2couleurs.png": "/sem/static/media/Logo_SEM-2couleurs.8b56c4f795b858f229c5.png",
     "static/media/Marbre_3.jpg": "/sem/static/media/Marbre_3.7fbc92ff67bf7d122466.jpg",
@@ -59,10 +56,10 @@
     "static/media/slick.woff": "/sem/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/sem/index.html",
     "main.bb2108ef.css.map": "/sem/static/css/main.bb2108ef.css.map",
-    "main.72ed068f.js.map": "/sem/static/js/main.72ed068f.js.map"
+    "main.892cc35a.js.map": "/sem/static/js/main.892cc35a.js.map"
   },
   "entrypoints": [
     "static/css/main.bb2108ef.css",
-    "static/js/main.72ed068f.js"
+    "static/js/main.892cc35a.js"
   ]
 }
