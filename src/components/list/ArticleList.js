@@ -8,6 +8,8 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {motion } from 'framer-motion';
+
 
 const Title = styled(Link)`
    color:#000 ;
@@ -19,13 +21,23 @@ const Title = styled(Link)`
 
 `;
 
-export default function ArticleList({item}) {
+export default function ArticleList({item,viewport,initial,whileInView,transition}) {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 400, bgcolor: '#f7f7f7b8' }}>
         {
             item.slice(1,5).map((item)=>(
                 <>
-                <ListItem alignItems="flex-start" key={item._id} >
+                <motion.div
+                    viewport={viewport}
+                    initial={initial}
+                    whileInView={whileInView}
+                    transition={transition}
+                    key={item._id} 
+                >
+                <ListItem 
+                     alignItems="flex-start"    
+                >
+                   
                     <ListItemAvatar>
                      <Avatar sx={{width:50,height:50}} variant="square" alt={item.alt} src={item.image} />
                     </ListItemAvatar>
@@ -35,11 +47,11 @@ export default function ArticleList({item}) {
                         <React.Fragment>
                         
                         <Typography
-                            sx={{ display: 'inline' }}
+                            sx={{ display:'inline',textAlign:'justify' }}
                             component="span"
                             variant="body2"
                             color="text.primary"
-                            textAlign="justify"
+                           
                         >
                             {item.date}
                         </Typography>
@@ -48,6 +60,7 @@ export default function ArticleList({item}) {
                     }
                     />
                 </ListItem>
+                </motion.div>
                 <Divider variant="inset" component="li" />
                 </>
             ))

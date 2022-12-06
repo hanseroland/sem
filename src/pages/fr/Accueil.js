@@ -2,10 +2,10 @@ import React,{useEffect} from 'react';
 import {motion,useAnimation } from 'framer-motion';
 import Section from '../../components/sections/Section';
 import Grid from '@mui/material/Grid';
+import { Button, ButtonGroup } from '@mui/material';
 import styled from 'styled-components';
 import Img from '../../images/AJCS3282.png';
 import Img2 from '../../images/AJCS3210.png';
-import Img3 from '../../images/pexels-aleksandar-pasaric-1238864.jpg';
 import Img4 from '../../images/index.png';
 import { Parallax } from 'react-parallax';
 import MediaCard from '../../components/cards/MediaCard';
@@ -29,13 +29,21 @@ import HeroSection from '../../components/banner/Herosection';
 import { useInView } from "react-intersection-observer";
 import Circle from '../../components/cards/Circle';
 import * as GiIcon from 'react-icons/gi'   
-import Slide from '../../components/banner/Slide';
 import Partners from '../../components/slick/Partners';
 import Homeslide from '../../components/slick/Homeslide';
-import Slide1 from '../../images/slide-1.jpg' 
-import Slide2 from '../../images/slide-2.jpg'
-import Slide3 from '../../images/slide-3.jpg'
-import back from '../../images/V79A6136.jpg'
+import Slide1 from '../../images/slide-1.jpg';
+import Slide2 from '../../images/slide-2.jpg';
+import Slide3 from '../../images/slide-3.jpg';
+import back from '../../images/V79A6136.jpg';
+import Img22 from '../../images/conseil.jpg';
+import Img33 from '../../images/slide-6.png';
+import Img44 from '../../images/pepite-dor.png';
+import Img55 from '../../images/slide-2.jpg';
+import ImgSEM from '../../images/webimag.png';
+import ArticleList from '../../components/list/ArticleList';
+import ActualiteTools from '../../components/list/ActualiteTools';
+import MDEditor from '@uiw/react-md-editor';
+
 
 
 
@@ -43,6 +51,31 @@ const Title3 = styled(motion.h3)`
    color:#FFF;
    font-size: 2rem;
    text-align:center;
+`;
+
+
+export const Image = styled(motion.img)`
+  position: relative;
+  width:100%;
+  max-width: 800px;
+  height: auto;
+  border-radius:10px;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+
+  &:hover {
+    box-shadow: 0px 20px 30px -7px rgba(0, 0, 0, 0.4);
+   }
+`;
+
+const Title5 = styled(motion.h3)`
+   color:#000 ;
+   text-align:center ;
+`;
+const Title2 = styled(motion.h2)`
+   color:#000 ;
+   text-align:left ;
 `;
 
 
@@ -148,6 +181,95 @@ export const data = [
 
   }
 ];
+
+const articles = [
+  {
+    _id:1,
+    title:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    image:ImgSEM,
+    alt:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."+
+     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"+
+     "when an unknown printer took a galley of type and scrambled it to make a type"+
+     "specimen book. It has survived not only five centuries, but also the leap into"+
+     "electronic typesetting, remaining essentially unchanged. It was popularised in"+ 
+     "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,"+
+     "and more recently with desktop publishing software like Aldus PageMaker including"+ 
+     "versions of Lorem Ipsum.",
+    category:"actualite",
+    date:"2022-11-10 13:19:05",
+    auteur:"Lorem"
+  },
+  {
+    _id:2,
+    title:"La SEM tient son premier Conseil d’administration présidé par le Pr Michel Mboussou",
+    image:Img22,
+    alt:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."+
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"+
+    "when an unknown printer took a galley of type and scrambled it to make a type"+
+    "specimen book. It has survived not only five centuries, but also the leap into"+
+    "electronic typesetting, remaining essentially unchanged. It was popularised in"+ 
+    "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,"+
+    "and more recently with desktop publishing software like Aldus PageMaker including"+ 
+    "versions of Lorem Ipsum.",
+    category:"actualite",
+    date:"2022-10-19 13:19:05",
+    auteur:"Lorem"
+  },
+  {
+    _id:3,
+    title:"Accompagner la contribution de l’Industrie Minière à l’économie gabonaise.",
+    image:Img33,
+    alt:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."+
+     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"+
+     "when an unknown printer took a galley of type and scrambled it to make a type"+
+     "specimen book. It has survived not only five centuries, but also the leap into"+
+     "electronic typesetting, remaining essentially unchanged. It was popularised in"+ 
+     "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,"+
+     "and more recently with desktop publishing software like Aldus PageMaker including"+ 
+     "versions of Lorem Ipsum.",
+    category:"actualite",
+    date:"2022-05-19 12:19:05",
+    auteur:"Lorem"
+  },
+  {
+    _id:4,
+    title:"Des pistes pour augmenter la production nationale d'or ?",
+    image:Img44,
+    alt:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."+
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"+
+    "when an unknown printer took a galley of type and scrambled it to make a type"+
+    "specimen book. It has survived not only five centuries, but also the leap into"+
+    "electronic typesetting, remaining essentially unchanged. It was popularised in"+ 
+    "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,"+
+    "and more recently with desktop publishing software like Aldus PageMaker including"+ 
+    "versions of Lorem Ipsum.",
+    category:"actualite",
+    date:"2022-03-19 13:29:04",
+    auteur:"Lorem"
+  },
+  {
+    _id:5,
+    title:"La Mine d'Or de MINKIE dans un nouveau décor",
+    image:Img55,
+    alt:"SOCIETE EQUATORIAL DES MINES - MANGANESE",
+    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."+
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"+
+    "when an unknown printer took a galley of type and scrambled it to make a type"+
+    "specimen book. It has survived not only five centuries, but also the leap into"+
+    "electronic typesetting, remaining essentially unchanged. It was popularised in"+ 
+    "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,"+
+    "and more recently with desktop publishing software like Aldus PageMaker including"+ 
+    "versions of Lorem Ipsum.",
+    category:"actualite",
+    date:"2022-02-01 13:19:05",
+    auteur:"Lorem"
+  }
+]
+
 function Accueil() {
 
   const control = useAnimation();
@@ -198,6 +320,54 @@ function Accueil() {
       </motion.div>
       <Section
         title="Actualités"
+        bgcolor="#f7f7f7b8"  
+        titleColor="#006431"
+        viewport={{once:false}}
+        initial={{opacity:0,y:-100}}
+        whileInView={{opacity:1,y:0}}
+        transition={{type:"easeIn", duration: 1 }}
+      >
+        <Grid container spacing={2}>
+              <Grid item lg={8} xs={12}>
+                <Box>
+                    <Image 
+                      src={ImgSEM} 
+                      alt="SOCIETE EQUATORIAL DES MINES - MANGANESE"
+                      viewport={{once:false}}
+                      initial={{opacity:0,x:-100}}
+                      whileInView={{opacity:1,x:0}}
+                      transition={{type:"easeIn", duration: 1 }}
+                    />
+                </Box>
+                <Box mt={2}>
+                    <ActualiteTools item={articles[0]} />
+                </Box>
+                <Box mt={2}>
+                     <Title2>{articles[0].title}</Title2>
+                     <MDEditor.Markdown source={articles[0].content} style={{backgroundColor:'#f7f7f7b8',color:"#000",textAlign:"justify"}} />
+                    
+                </Box>
+                <Box mt={2} sx={{display:'flex',justifyContent:"space-between"}} >
+                <Button sx={{color:'#006431',textTransform:'none'}} size="small">Lire plus</Button>
+               
+                </Box>
+              </Grid>
+              <Grid item lg={4} xs={12}>
+                 <Box>
+                     <Title5>Récents</Title5>
+                        <ArticleList
+                            item={articles}
+                            viewport={{once:false}}
+                            initial={{opacity:0,x:100}}
+                            whileInView={{opacity:1,x:0}}
+                            transition={{type:"easeIn", duration: 1,delay:0.15 }}
+                        />
+                 </Box>
+              </Grid>
+        </Grid>
+      </Section>
+     {/* <Section
+        title="Actualités"
         bgcolor="#f7f7f7b8"
         titleColor="#006431"
         viewport={{once:false}}
@@ -240,8 +410,8 @@ function Accueil() {
              <Grid item lg={4} xs={12} >
                 <Box
                   style={{
-                    overflowX: 'hidden', /* Hide horizontal scrollbar */
-                    overflowY: "scroll", /* Add vertical scrollbar */
+                    overflowX: 'hidden', 
+                    overflowY: "scroll", 
                     maxHeight:560,
                     display: "flex",
                     flexDirection: "column",
@@ -291,7 +461,8 @@ function Accueil() {
                 </Box>
              </Grid>
           </Grid>
-      </Section>
+      </Section>*/}
+
       <HeroSection
        ref={ref}
        contol={control}

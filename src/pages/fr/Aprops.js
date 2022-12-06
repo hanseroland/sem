@@ -106,7 +106,7 @@ function Aprops() {
     <>
       <BannerBread title="À propos" />
       <Section
-        title="À propos de nous"
+        title=""
         titleColor="#006431"
         bgcolor="#fff"
         viewport={{once:false}}

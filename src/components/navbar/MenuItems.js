@@ -24,12 +24,7 @@ export const MenuItems = [
         icon: <FaIcons.FaStar />,
         cName: 'sub-nav'
       },
-      {
-        title: 'Messages de nos Leaders',
-        path: '/a-propos/messages-de-nos-leaders',
-        icon: <FaIcons.FaStar />,
-        cName: 'sub-nav'
-      },
+     
       {
         title: 'Équipe Dirigeante',
         path: '/a-propos/equipe-dirigeante',
@@ -86,14 +81,14 @@ export const MenuItems = [
         iconOpened: <RiIcons.RiArrowUpSFill />,
         
   },
-  {
+  /*{
     title: 'Newsroom',
     path: '/redaction',
     icon: <FaIcons.FaNewspaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
    
-  },
+  },*/
   {
     title: 'Contact',
     path: '/contact',

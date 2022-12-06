@@ -104,11 +104,11 @@ export default function VerticalTabs({data}) {
       {
             data.map((item,index)=>(
             <TabPanel key={item._id} value={value} index={index}>
-                <Grid  ml={2} item xs={12}> <h4>{item.title} </h4> </Grid>
+                  <Grid  ml={1} item xs={12}> <h4>{item.title} </h4> </Grid>
 
                
                     {item.image ?
-                      <Grid ml={2} item lg={6} xs={12}> 
+                      <Grid ml={1} item lg={12} xs={12}> 
                             <Image src={item.image} alt={item.alt} />
                       </Grid>
                       :
@@ -116,7 +116,7 @@ export default function VerticalTabs({data}) {
                     }
                     
               
-                <Grid item lg={6} xs={12}> 
+                <Grid item lg={12}  xs={12}> 
                     <MDEditor.Markdown source={item.content} style={{backgroundColor:'#fff',color:"#000",textAlign:"justify"}} />
                 </Grid>
             </TabPanel>

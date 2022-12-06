@@ -114,7 +114,7 @@ function Footer() {
                >
                   <Typography variant="h6" color="white"> <b>À propos</b> </Typography>
                   <FooterLink>Actualités</FooterLink>
-                  <FooterLink>Missions & Valeurs</FooterLink>
+                 {/* <FooterLink>Missions & Valeurs</FooterLink>*/}
                   <FooterLink>Messages de nos  Leaders</FooterLink>
                   <FooterLink>Équipe dirigeante</FooterLink>
                   <FooterLink>Galerie</FooterLink>

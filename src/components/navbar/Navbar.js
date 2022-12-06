@@ -111,6 +111,7 @@ const MenuOption = styledMui(Link)(({ theme }) => ({
     textAlign:"left",
     transition: "0.3s",
     width:100,
+    fontWeight:"bold",
     zIndex:1,
     [theme.breakpoints.up('md')]: {
       paddingLeft:theme.spacing(3),
@@ -188,7 +189,7 @@ const MenuSub = ({item,handleClick}) => {
 
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav && handleClick}>
+      <SidebarLink to={item.path} onClick={item.subNav && showSubnav }>
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
@@ -204,7 +205,7 @@ const MenuSub = ({item,handleClick}) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink to={item.path} key={index}>
+            <DropdownLink to={item.path} key={index}  onClick={handleClick} >
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>
@@ -274,11 +275,11 @@ function Navbar() {
       title: 'Missions & Valeurs',
       path: '/a-propos/missions-et-valeurs',
     },
-    {
+   /* {
       _id:2,
       title: 'Messages de nos Leaders',
       path: '/a-propos/messages-de-nos-leaders',
-    },
+    },*/
     {
       _id:3,
       title: 'Équipe Dirigeante',
@@ -448,7 +449,7 @@ function Navbar() {
         <MenuBox  >
             
            
-              <MenuOption
+            {/*  <MenuOption
                 component="button"
                 variant="body1"
                   to='/'
@@ -456,7 +457,7 @@ function Navbar() {
               >
                   Accueil
               </MenuOption>
-          
+             */}
                 <MenuOption
                     component="button"
                     variant="body1"
@@ -492,14 +493,14 @@ function Navbar() {
             >
                Investisseurs
             </MenuOption>
-            <MenuOption
+           {/* <MenuOption
               component="button"
               variant="body1"
               to="redaction"
               className={navbar ? clsx(classes.menuOption,classes.menuOptionActive) : classes.menuOption }
             >
                Redaction
-            </MenuOption>
+            </MenuOption>*/}
             <MenuOption
               component="button"
               variant="body1"

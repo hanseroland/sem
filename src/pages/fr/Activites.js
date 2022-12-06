@@ -170,7 +170,7 @@ function Activites() {
 
        <BannerBread title="Nos Activités" />
        <Section
-        title="Nos Activités"
+        title=""
         titleColor="#006431"
         bgcolor="#f7f7f7b8"
         viewport={{once:false}}
@@ -195,7 +195,7 @@ function Activites() {
         transition={{type:"easeIn", duration: 1 }}
       >
         <Grid container spacing={2}>
-              <VerticalTabs
+              <VerticalTabs  
                  data={Projects}
               />
         </Grid>
