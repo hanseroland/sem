@@ -64,11 +64,11 @@ export default function MediaCard({img,alt,title,content}) {
       />
       <CardContent>
         <Typography fontSize={15} gutterBottom variant="h6" component="div">
-          {title}
+          {title}  
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {content}
-        </Typography>
+        </Typography> 
       </CardContent>
       <CardActions>
         <Button sx={{color:'#006431',textTransform:'none'}} size="small">Partager</Button>

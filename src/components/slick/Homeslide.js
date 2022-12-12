@@ -110,8 +110,8 @@ function Homeslide({items}) {
                         alt="SOCIETE EQUATORIALE DES MINES"
                       />
                       <Content>
-                          <H2>Slide One</H2>
-                          <P>Lorem ipsum</P>
+                          <H2></H2>
+                          <P></P>
                       </Content>
                   </ImgBox>   
                   </Slide>

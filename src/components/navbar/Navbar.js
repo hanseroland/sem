@@ -11,7 +11,6 @@ import styled  from 'styled-components';
 import Submenu from './Submenu';
 import { MenuItems } from './MenuItems';
 import { Facebook, LinkedIn } from '@mui/icons-material';
-import {BrowserRouter as Router,Route,Routes, useLocation} from 'react-router-dom'
 
 
 const SidebarLink = styled(Link)`
