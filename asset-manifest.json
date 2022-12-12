@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/sem/static/css/main.bb2108ef.css",
-    "main.js": "/sem/static/js/main.892cc35a.js",
+    "main.js": "/sem/static/js/main.c8f0e709.js",
     "static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.jpg": "/sem/static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.fb0aca31fc2e892731bf.jpg",
     "static/media/carte_potentiel_Gabon1.jpg": "/sem/static/media/carte_potentiel_Gabon1.e28ff15c836482e5c42e.jpg",
     "static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.jpg": "/sem/static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.0bbc86be8159b77a2c35.jpg",
     "static/media/carte_Mebaga_S2.jpg": "/sem/static/media/carte_Mebaga_S2.814f4234a2e846e93169.jpg",
     "static/media/minkie01.jpg": "/sem/static/media/minkie01.f7bb8fbbbefb21abdad2.jpg",
-    "static/media/slide-1.jpg": "/sem/static/media/slide-1.0ed0bbe085ca92b9d3cf.jpg",
     "static/media/localisation_de_Miamizez_S3.jpg": "/sem/static/media/localisation_de_Miamizez_S3.c553cbd7deaa04bfd4d5.jpg",
     "static/media/IMG_5319.jpg": "/sem/static/media/IMG_5319.0b795a016eea143c6045.jpg",
     "static/media/minkie03.jpg": "/sem/static/media/minkie03.be1443d44445d796abe9.jpg",
@@ -18,18 +17,20 @@
     "static/media/pepite-dor.png": "/sem/static/media/pepite-dor.d162cd6bf5ceee6523ac.png",
     "static/media/V79A6136.jpg": "/sem/static/media/V79A6136.72b68bc24e54f1c585b0.jpg",
     "static/media/AJCS3282.png": "/sem/static/media/AJCS3282.0e5406337397de948071.png",
-    "static/media/slide-3.jpg": "/sem/static/media/slide-3.666acde751028d83d3f6.jpg",
     "static/media/AJCS3006.png": "/sem/static/media/AJCS3006.ee613da1d3360947703f.png",
     "static/media/AJCS3210.png": "/sem/static/media/AJCS3210.7fcde5598ffba16325e0.png",
     "static/media/aurus_project.jpg": "/sem/static/media/aurus_project.66eec7963b818b37acd5.jpg",
     "static/media/slide-2.jpg": "/sem/static/media/slide-2.011906c27d1cdce0193b.jpg",
     "static/media/belinga_project.jpg": "/sem/static/media/belinga_project.aef619444dfd659cca3b.jpg",
     "static/media/index.png": "/sem/static/media/index.807a0f0a1b8331ec95a1.png",
+    "static/media/PHOTO-2022-12-06-17-09-03 (2).jpg": "/sem/static/media/PHOTO-2022-12-06-17-09-03 (2).4c8fed1eea92644de955.jpg",
     "static/media/Ali-Bongo-Ondimba.png": "/sem/static/media/Ali-Bongo-Ondimba.78dfe85ec0ad6d78994a.png",
     "static/media/oussou_project.jpg": "/sem/static/media/oussou_project.e6bf704d4c01c666c194.jpg",
     "static/media/BSO4_project.jpg": "/sem/static/media/BSO4_project.e30d50dbe338c43dc613.jpg",
+    "static/media/PHOTO-2022-12-06-17-11-25 (1).jpg": "/sem/static/media/PHOTO-2022-12-06-17-11-25 (1).daf6b56393d1c2676d7f.jpg",
     "static/media/AJCS2865.jpg": "/sem/static/media/AJCS2865.d78d921d7e095a69f65b.jpg",
     "static/media/AJCS2937.jpg": "/sem/static/media/AJCS2937.1c7b1bd155e8b5505c4d.jpg",
+    "static/media/PHOTO-2022-12-06-17-11-25.jpg": "/sem/static/media/PHOTO-2022-12-06-17-11-25.8eef1e44d4e1d290f99f.jpg",
     "static/media/MG_5295.jpg": "/sem/static/media/MG_5295.c62400cb4e1b06b2c140.jpg",
     "static/media/MG_5308.jpg": "/sem/static/media/MG_5308.f77622a091bcda276c0c.jpg",
     "static/media/Marbre_1.jpg": "/sem/static/media/Marbre_1.ec11ba8ea557c741e0f1.jpg",
@@ -56,10 +57,10 @@
     "static/media/slick.woff": "/sem/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/sem/index.html",
     "main.bb2108ef.css.map": "/sem/static/css/main.bb2108ef.css.map",
-    "main.892cc35a.js.map": "/sem/static/js/main.892cc35a.js.map"
+    "main.c8f0e709.js.map": "/sem/static/js/main.c8f0e709.js.map"
   },
   "entrypoints": [
     "static/css/main.bb2108ef.css",
-    "static/js/main.892cc35a.js"
+    "static/js/main.c8f0e709.js"
   ]
 }
