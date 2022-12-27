@@ -52,6 +52,7 @@ import { Link } from 'react-router-dom';
 import Circle from '../../components/cards/Circle';
 import * as GiIcon from 'react-icons/gi'
 import MediaCard from '../../components/cards/MediaCard';
+import BackActivites from '../../images/nick-nice-gPm.jpg'
 
 
 
@@ -467,7 +468,7 @@ function Accueil() {
         transition={{type:"easeIn", duration: 1 }}
     >
         <Grid container spacing={4}>
-           <Grid item xs={6}>
+           <Grid item lg={6} xs={12}>
                <ImgWrap
                    viewport={{once:false}}
                    initial={{opacity:0,x:-100}}
@@ -477,7 +478,7 @@ function Accueil() {
                   <ImagEquipe src={Team[0].img}  alt="SOCIÉTÉ ÉQUATORIALE DES MINES - DIRECTEUR" />
                 </ImgWrap>
            </Grid>
-           <Grid item xs={6}>
+           <Grid item lg={6} xs={12}>
               <Boxe
                   viewport={{once:false}}
                   initial={{opacity:0,x:100}}
@@ -520,68 +521,89 @@ function Accueil() {
             
         </Grid>
       </Section>
-      <Section
-        title=""
-        titleColor="#006431"
-        bgcolor="#006431"
-        viewport={{once:false}}
-        initial={{opacity:0,x:100}}
-        whileInView={{opacity:1,x:0}}
-        transition={{type:"easeIn", duration: 1 }}
-    >
-        <Grid container spacing={4}>
-           <Grid item xs={4}
-            style={{
-              borderLeft:"4px solid #fff",
-              
-            }}
-           >
-            <Title3  style={{fontSize:20}} >Nos Activités</Title3>
-               
-           </Grid>
-           <Grid item xs={8}>
-              <Boxe
-                  viewport={{once:false}}
-                  initial={{opacity:0,x:100}}
-                  whileInView={{opacity:1,x:0}}
-                  transition={{type:"easeIn", duration: 1 }}      
-              >
-                <Title3  style={{textAlign:'left'}} >PIONIER DE DEMAIN</Title3>
-                <Typography color="#fff" align="justify" variant="inherit" >
-                En 2015, la communauté internationale a adopté une série de 17 objectifs dans le cadre 
-                  d'un nouveau programme mondial pour le développement durable.
-                L'environnement est le fondement commun de chacun de ces objectifs, qu'il s'agisse de mettre fin à la 
-                faim, de réduire les inégalités ou de construire des villes et des communautés durables dans 
-                le monde entier.Nous nous engageons à travailler avec toutes les parties prenantes pour atteindre 
-                les objectifs
-                 ambitieux du programme, en particulier ceux directement liés à l'environnement.
+      <div>
+      <Parallax
+                bgImage={BackActivites}
+                renderLayer={percentage => (
+                    <div
+                        style={{
+                            position: 'absolute',
+                            //background: `rgba(255, 255, 0, ${percentage * 1})`,
+                            background:"#0064304e",
+                            width: '100%',
+                            height: "100%",
+                            //left: '25%',
+                            //top: '25%',
+                           // width: percentage * 700,
+                           // height: percentage * 700,
+                        }}
+                    />
+                )}
+            >
+                <Container>
+                
+                  <Grid container  spacing={0} sx={{paddingBottom:10,borderLeft:"2px solid #fff"}} >
+                  <Box p={4} >
+                    <Title3 
+                      viewport={{once:false}}
+                      initial={{opacity:0,y:-100}}
+                      whileInView={{opacity:1,y:0}}
+                      transition={{type:"easeIn", duration: 1,delay:0.15 }}
+                     style={{
+                      textAlign:"left"
+                     }}
+                    >
+                           Nos Activités
+                    </Title3>
+                    
+                </Box>
+                  <Grid item lg={12} xs={12} >
+          
+                      <Boxe
+                          viewport={{once:false}}
+                          initial={{opacity:0,x:100}}
+                          whileInView={{opacity:1,x:0}}
+                          transition={{type:"easeIn", duration: 1 }}      
+                      >
+                        <Title3  style={{textAlign:'center',fontSize:20}} >PIONIER DE DEMAIN</Title3>
+                        <Typography color="#fff" align="center" variant="inherit" >
+                        En 2015, la communauté internationale a adopté une série de 17 objectifs dans le cadre 
+                          d'un nouveau programme mondial pour le développement durable.
+                        L'environnement est le fondement commun de chacun de ces objectifs, qu'il s'agisse de mettre fin à la 
+                        faim, de réduire les inégalités ou de construire des villes et des communautés durables dans 
+                        le monde entier.Nous nous engageons à travailler avec toutes les parties prenantes pour atteindre 
+                        les objectifs
+                        ambitieux du programme, en particulier ceux directement liés à l'environnement.
 
-                </Typography>
-               
-              </Boxe>
-              <Box
-                style={{
-                  display:"flex",
-                  justifyContent:"flex-start",
-                  padding:10
+                        </Typography>
+                      
+                      </Boxe>
+                      <Box
+                        style={{
+                          display:"flex",
+                          justifyContent:"center",
+                          padding:10,
+                          marginTop:10
 
-                }}
-              >
-                  <ButtonLink to="/nos-activites" 
-                    color="#006431"
-                    backgroundcolor="#ffff"
-                  >
-                            Voir plus
-                  </ButtonLink>
-              </Box>
-             
-           </Grid>
-            
-        </Grid>
-      </Section>
+                        }}
+                      >
+                          <ButtonLink to="/nos-activites" 
+                            color="#006431"
+                            backgroundcolor="#ffff"
+                          >
+                                    Voir plus
+                          </ButtonLink>
+                      </Box>
+                    
+                  </Grid>
+                  </Grid>
+                </Container>
+      </Parallax>
+      </div>
+     
       <Section
         title="Actualités"
-        bgcolor="#f7f7f7b8"
+        bgcolor="#fff"
         titleColor="#006431"
         viewport={{once:false}}
         initial={{opacity:0,y:-100}}
@@ -635,7 +657,7 @@ function Accueil() {
                 >
                   
                      <Title5>Récents</Title5>
-                        <ArticleList
+                        <ArticleList 
                             item={articles}
                             viewport={{once:false}}
                             initial={{opacity:0,x:100}}

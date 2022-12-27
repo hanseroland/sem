@@ -80,7 +80,7 @@ const P = styled.p`
 const Content = styled.div`
   position:absolute;
   text-align:center;
-  max-width:1000px;
+  //max-width:1000px;
 `;
 
 function Homeslide({items}) {
@@ -99,10 +99,11 @@ function Homeslide({items}) {
     
     
          <Slider {...settings}>
-          
+          <Slide>
              {
+               
                 items.map((item)=>(
-                  <Slide>
+                 
                   <ImgBox>
                      <Image
                         key={item._id}
@@ -114,11 +115,12 @@ function Homeslide({items}) {
                           <P></P>
                       </Content>
                   </ImgBox>   
-                  </Slide>
+                 
                       
                 ))
+                
               }
-            
+            </Slide>
         </Slider>
      
   );

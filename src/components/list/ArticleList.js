@@ -23,7 +23,7 @@ const Title = styled(Link)`
 
 export default function ArticleList({item,viewport,initial,whileInView,transition}) {
   return (
-    <List sx={{ width: '100%', maxWidth: 400, bgcolor: '#f7f7f7b8' }}>
+    <List sx={{ width: '100%', maxWidth: 400, bgcolor: '#fff' }}>
         {
             item.slice(1,5).map((item)=>(
                 <>
