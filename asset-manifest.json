@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/sem/static/css/main.bb2108ef.css",
-    "main.js": "/sem/static/js/main.c8f0e709.js",
+    "main.js": "/sem/static/js/main.e96aab01.js",
     "static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.jpg": "/sem/static/media/Eramet-Produits-Manganese-Minerai-Visuel-Rocheux_0.fb0aca31fc2e892731bf.jpg",
     "static/media/carte_potentiel_Gabon1.jpg": "/sem/static/media/carte_potentiel_Gabon1.e28ff15c836482e5c42e.jpg",
     "static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.jpg": "/sem/static/media/CARTE-GEOLOGIQUE-ET-DES-RESSOURCES--MINERALES_1.0bbc86be8159b77a2c35.jpg",
     "static/media/carte_Mebaga_S2.jpg": "/sem/static/media/carte_Mebaga_S2.814f4234a2e846e93169.jpg",
     "static/media/minkie01.jpg": "/sem/static/media/minkie01.f7bb8fbbbefb21abdad2.jpg",
+    "static/media/nick-nice-gPm.jpg": "/sem/static/media/nick-nice-gPm.8fe3a45c6cd10a36d209.jpg",
     "static/media/localisation_de_Miamizez_S3.jpg": "/sem/static/media/localisation_de_Miamizez_S3.c553cbd7deaa04bfd4d5.jpg",
     "static/media/IMG_5319.jpg": "/sem/static/media/IMG_5319.0b795a016eea143c6045.jpg",
     "static/media/minkie03.jpg": "/sem/static/media/minkie03.be1443d44445d796abe9.jpg",
@@ -57,10 +58,10 @@
     "static/media/slick.woff": "/sem/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/sem/index.html",
     "main.bb2108ef.css.map": "/sem/static/css/main.bb2108ef.css.map",
-    "main.c8f0e709.js.map": "/sem/static/js/main.c8f0e709.js.map"
+    "main.e96aab01.js.map": "/sem/static/js/main.e96aab01.js.map"
   },
   "entrypoints": [
     "static/css/main.bb2108ef.css",
-    "static/js/main.c8f0e709.js"
+    "static/js/main.e96aab01.js"
   ]
 }
